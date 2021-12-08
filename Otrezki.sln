@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otrezki", "Otrezki\Otrezki.csproj", "{87CDCC11-08F3-4C06-B5ED-EF16B5B406DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestOtrezki", "UnitTestOtrezki\UnitTestOtrezki.csproj", "{03789BFA-7761-45E2-9642-CD2C1F3B52B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87CDCC11-08F3-4C06-B5ED-EF16B5B406DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87CDCC11-08F3-4C06-B5ED-EF16B5B406DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87CDCC11-08F3-4C06-B5ED-EF16B5B406DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87CDCC11-08F3-4C06-B5ED-EF16B5B406DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03789BFA-7761-45E2-9642-CD2C1F3B52B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03789BFA-7761-45E2-9642-CD2C1F3B52B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03789BFA-7761-45E2-9642-CD2C1F3B52B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03789BFA-7761-45E2-9642-CD2C1F3B52B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D147EEDF-D488-44B7-8CAC-9D0E56C0266F}
+	EndGlobalSection
+EndGlobal

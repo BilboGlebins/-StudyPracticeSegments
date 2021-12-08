@@ -1,0 +1,108 @@
+﻿<Window x:Class="Otrezki.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gg="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        xmlns:local="clr-namespace:Otrezki"
+        mc:Ignorable="d"
+        Title="Otrezki" Height="775" Width="900">
+    <Grid Name="Pole" Margin="0,0,2,0" HorizontalAlignment="Right" Width="890">
+
+        <TabControl HorizontalAlignment="Left" Height="744" VerticalAlignment="Top" Width="890" Grid.ColumnSpan="2">
+            <TabItem Header="Отрезки" Margin="-2,-2,-221,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="369*"/>
+                        <ColumnDefinition Width="521*"/>
+                    </Grid.ColumnDefinitions>
+                    <Canvas x:Name="CanvasGraf" HorizontalAlignment="Left" Height="400" Width="500" Margin="374,184,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                        <Canvas>
+                            <Line X1="250" Y1="380" X2="250" Y2="0" Margin="0,10,0,0" Stroke="Black" StrokeThickness="2"/>
+                            <Line X1="480" Y1="200" X2="0" Y2="200" Margin="10,0,0,0" Stroke="Black" StrokeThickness="2"/>
+                        </Canvas>
+                    </Canvas>
+
+                    <Label Content="Отрезок №1" HorizontalAlignment="Left" Margin="109,10,0,0" VerticalAlignment="Top" Width="84" Height="26"/>
+                    <TextBox x:Name="tbX1_1" HorizontalAlignment="Left" Height="34" Width="50" Margin="24,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="20"/>
+                    <TextBox x:Name="tbY1_1" HorizontalAlignment="Left" Height="34" Width="50" Margin="92,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="20"/>
+                    <TextBox x:Name="tbX1_2" HorizontalAlignment="Left" Height="34" Width="50" Margin="160,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="20"/>
+                    <TextBox x:Name="tbY1_2" HorizontalAlignment="Left" Height="34" Width="50" Margin="228,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="20"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="79" Margin="10,10,0,0" VerticalAlignment="Top" Width="284"/>
+
+                    <Label Content="Отрезок №2" HorizontalAlignment="Left" Margin="109,94,0,0" VerticalAlignment="Top" Width="84" Height="26"/>
+                    <TextBox x:Name="tbX2_1" HorizontalAlignment="Left" Height="34" Width="50" Margin="24,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="20"/>
+                    <TextBox x:Name="tbY2_1" HorizontalAlignment="Left" Height="34" Width="50" Margin="92,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="20"/>
+                    <TextBox x:Name="tbX2_2" HorizontalAlignment="Left" Height="34" Width="50" Margin="160,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="20"/>
+                    <TextBox x:Name="tbY2_2" HorizontalAlignment="Left" Height="34" Width="50" Margin="228,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="20"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="79" Margin="9,94,0,0" VerticalAlignment="Top" Width="284"/>
+
+                    <Button Content="Пострость отрезок №1" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top" Width="132" Click="Otrezok1_Click" Height="20"/>
+                    <Button Content="Пострость отрезок №2" HorizontalAlignment="Left" Margin="160,197,0,0" VerticalAlignment="Top" Width="134" Click="Otrezok2_Click" Height="20"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="57" Margin="10,178,0,0" VerticalAlignment="Top" Width="284"/>
+
+                    <Button Content="Точка пересечения" HorizontalAlignment="Left" Margin="81,252,0,0" VerticalAlignment="Top" Width="129" Click="Peresechenie_Click" Height="20"/>
+                    <Label Content="Отрезки пересекаются в:" HorizontalAlignment="Left" Margin="81,277,0,0" VerticalAlignment="Top" Width="154" Height="26"/>
+                    <TextBox x:Name="TextBoxX" HorizontalAlignment="Left" Height="26" Margin="52,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" TextAlignment="Center" FontSize="14"/>
+                    <TextBox x:Name="TextBoxY" HorizontalAlignment="Left" Height="26" Margin="188,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" TextAlignment="Center" FontSize="14"/>
+                    <Label Content="x:" HorizontalAlignment="Left" Margin="24,308,0,0" VerticalAlignment="Top" Width="23" Height="26" RenderTransformOrigin="0.737,0.671"/>
+                    <Label Content="y:" HorizontalAlignment="Left" Margin="160,308,0,0" VerticalAlignment="Top" Width="23" Height="26" RenderTransformOrigin="0.737,0.671"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="109" Margin="10,240,0,0" VerticalAlignment="Top" Width="286"/>
+
+                    <Button Content="Угол отрезков" HorizontalAlignment="Left" Margin="92,374,0,0" VerticalAlignment="Top" Width="132" Click="Ugol_Click" Height="20"/>
+                    <Label Content="Отрезок №1 лежит под углом" HorizontalAlignment="Left" Margin="10,403,0,0" VerticalAlignment="Top" Height="26" Width="175"/>
+                    <TextBox x:Name="TextBoxAngle1" HorizontalAlignment="Left" Width="93" Height="26" Margin="185,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="14"/>
+                    <Label Content="Отрезок №1 лежит под углом" HorizontalAlignment="Left" Margin="8,434,0,0" VerticalAlignment="Top" Height="26" Width="175"/>
+                    <TextBox x:Name="TextBoxAngle2" HorizontalAlignment="Left" Width="93" Height="26" Margin="185,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="14"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="124" Margin="10,354,0,0" VerticalAlignment="Top" Width="286"/>
+
+                    <Button Content="↻" HorizontalAlignment="Left" Margin="299,41,0,0" VerticalAlignment="Top" Width="60" Height="34" FontSize="20" Click="Erase1_Click"/>
+                    <Button Content="↻" HorizontalAlignment="Left" Margin="299,125,0,0" VerticalAlignment="Top" Width="60" Height="34" FontSize="20" Click="Erase2_Click"/>
+
+                    <Label Content="Введите координаты точки:" HorizontalAlignment="Left" Margin="10,499,0,0" VerticalAlignment="Top" Width="161"/>
+                    <Label Content="x:" HorizontalAlignment="Left" Margin="171,499,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TextBoxTurnX" HorizontalAlignment="Left" Height="26" Margin="189,499,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" TextAlignment="Center"/>
+                    <Label Content="y:" HorizontalAlignment="Left" Margin="230,499,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="TextBoxTurnY" HorizontalAlignment="Left" Height="26" Margin="248,499,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" TextAlignment="Center"/>
+
+                    <Label Content="Введите угол:" HorizontalAlignment="Left" Margin="15,530,0,0" VerticalAlignment="Top" Width="86"/>
+                    <TextBox Name="TextBoxTurnAngle" HorizontalAlignment="Left" Height="26" Margin="106,530,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" TextAlignment="Center"/>
+                    <Button Content="Повернуть отрезок" HorizontalAlignment="Left" Margin="160,533,0,0" VerticalAlignment="Top" Width="118" Click="Turn_Click"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="87" Margin="10,483,0,0" VerticalAlignment="Top" Width="286"/>
+
+                    <Label Content="Введите отноешния в котором разделить отрезок" HorizontalAlignment="Left" Margin="8,575,0,0" VerticalAlignment="Top" Width="286"/>
+                    <TextBox Name="ContactA" HorizontalAlignment="Left" Height="26" Margin="65,596,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+                    <TextBox Name="ContactB" HorizontalAlignment="Left" Height="26" Margin="174,601,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+                    <TextBox Name="ContactC" HorizontalAlignment="Left" Height="26" Margin="65,634,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+                    <TextBox Name="ContactD" HorizontalAlignment="Left" Height="26" Margin="174,634,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="51"/>
+                    <Label Content="A:" HorizontalAlignment="Left" Margin="40,596,0,0" VerticalAlignment="Top"/>
+                    <Label Content="B:" HorizontalAlignment="Left" Margin="152,601,0,0" VerticalAlignment="Top"/>
+                    <Label Content="C:" HorizontalAlignment="Left" Margin="40,634,0,0" VerticalAlignment="Top"/>
+                    <Label Content="D:" HorizontalAlignment="Left" Margin="152,634,0,0" VerticalAlignment="Top" Width="19"/>
+                    <Button Content="Разделить в отношении" HorizontalAlignment="Left" Margin="40,665,0,0" VerticalAlignment="Top" Width="185" Click="Contact_Click"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="132" Margin="10,575,0,0" VerticalAlignment="Top" Width="287"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="История" Margin="217,-2,-449,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="371*"/>
+                        <ColumnDefinition Width="513*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Name="historytable" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="716" Margin="0" VerticalAlignment="Top" Width="884" Grid.ColumnSpan="2">            
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding SegmentStartX1}" Header="X1 отрезка №1" Width="3*"/>
+                            <DataGridTextColumn Binding="{Binding SegmentStartY1}" Header="Y1 отрезка №1" Width="3*"/>
+                            <DataGridTextColumn Binding="{Binding SegmentStartX2}" Header="X2 отрезка №1" Width="3*"/>
+                            <DataGridTextColumn Binding="{Binding SegmentStartY2}" Header="Y2 отрезка №1" Width="3*"/>
+                            <DataGridTextColumn Binding="{Binding SegmentStartX3}" Header="X1 отрезка №2" Width="3*"/>
+                            <DataGridTextColumn Binding="{Binding SegmentStartY3}" Header="Y1 отрезка №2" Width="3*"/>
+                            <DataGridTextColumn Binding="{Binding SegmentStartX4}" Header="X2 отрезка №2" Width="3*"/>
+                            <DataGridTextColumn Binding="{Binding SegmentStartY4}" Header="Y2 отрезка №2" Width="3*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
